@@ -12,12 +12,18 @@ Autostart libvirt guests with a delay.
     service libvirt-guests-delayed status
 
     ● libvirt-guests-delayed.service - Running libvirt delayed Guests
+
          Loaded: loaded (/etc/systemd/system/libvirt-guests-delayed.service; enabled; vendor preset: enabled)
+
          Active: active (exited) since Thu 2024-08-01 23:27:59 CEST; 16min ago
+
         Process: 70440 ExecStart=/usr/lib/libvirt/guests_delayed.py (code=exited, status=0/SUCCESS)
+
        Main PID: 70440 (code=exited, status=0/SUCCESS)
 
+
     août 01 23:27:59 xxxxxxxx systemd[1]: Started Running libvirt delayed Guests.
+
     août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found configuration : [['guest1', '800'], ['guest2', '500'], ['guest3', '120']]
     août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found inactive guests : ['guest1', 'guest2', 'guest3']
     août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Schedule start of guest1 in 800 seconds
