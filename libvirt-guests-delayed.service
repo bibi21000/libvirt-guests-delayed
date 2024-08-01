@@ -1,0 +1,18 @@
+[Unit]
+Description=Running libvirt delayed Guests
+Wants=libvirtd.service
+Wants=libvirt-guests.service
+After=network.target
+After=time-sync.target
+After=libvirtd.service
+After=libvirt-guests.service
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/libvirt/guests_delayed.py
+StandardOutput=journal+console
+RemainAfterExit=yes
+TimeoutStartSec=1800
+
+[Install]
+WantedBy=multi-user.target
