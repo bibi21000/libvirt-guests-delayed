@@ -8,13 +8,10 @@ Autostart libvirt guests with a delay.
 - Create the configuration file in /etc/libvirt/guests_delayed.conf
 - Remove autostart in the configuration of guests you want to delay
 
-
     service libvirt-guests-delayed status
-
     ● libvirt-guests-delayed.service - Running libvirt delayed Guests
 
          Loaded: loaded (/etc/systemd/system/libvirt-guests-delayed.service; enabled; vendor preset: enabled)
-
          Active: active (exited) since Thu 2024-08-01 23:27:59 CEST; 16min ago
 
         Process: 70440 ExecStart=/usr/lib/libvirt/guests_delayed.py (code=exited, status=0/SUCCESS)
