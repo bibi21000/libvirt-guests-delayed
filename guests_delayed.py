@@ -35,7 +35,9 @@ def load_conf():
         res = [ r for r in res if r != '' and r[0] != "#" ]
         res = [ re.split(' |\t', r) for r in res ]
         return [ [r[0].strip(), r[1].strip()] for r in res]
-    return []
+    else:
+        syslog.syslog(syslog.LOG_INFO, "Can't find configuration file %s" % conf_file)
+        return []
 
 def list_guests():
     result = subprocess.run([virsh, 'list', '--inactive', '--no-autostart', '--name'], text=True, stdout=subprocess.PIPE)
@@ -57,7 +59,8 @@ def main():
         syslog.syslog(syslog.LOG_ERR, 'Errors starting guests : %s' % errors)
         import sys
         sys.exit(1)
-    syslog.syslog(syslog.LOG_INFO, 'All delayed guests started')
+    if len(conf) > 0:
+        syslog.syslog(syslog.LOG_INFO, 'All delayed guests started')
 
 if __name__ == '__main__':
 
