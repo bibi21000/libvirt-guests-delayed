@@ -1,6 +1,9 @@
 # libvirt-guests-delayed
 Autostart libvirt guests with a delay.
 
+Installation for Debian/Ubuntu
+------------------------------
+
 - Copy guests_delayed.py to /usr/lib/libvirt
 
 - Make it executable
@@ -9,6 +12,8 @@ Autostart libvirt guests with a delay.
 
 - Enable it to start it at boot
 
+> systemctl enable libvirt-guests-delayed.service
+
 - Create the configuration file in /etc/libvirt/guests_delayed.conf
 
 > guest1 800<br>
@@ -16,6 +21,10 @@ Autostart libvirt guests with a delay.
 > guest3 120
 
 - Remove autostart in the configuration of guests you want to delay
+
+> virsh autostart guest1 --disable
+> virsh autostart guest2 --disable
+> virsh autostart guest3 --disable
 
 - And reboot to try it
 
@@ -27,7 +36,7 @@ Autostart libvirt guests with a delay.
 >   Process: 70440 ExecStart=/usr/lib/libvirt/guests_delayed.py (code=exited, status=0/SUCCESS)<br>
 >   Main PID: 70440 (code=exited, status=0/SUCCESS)<br>
 > <br>
-> août 01 23:27:59 xxxxxxxx systemd[1]: Started Running libvirt delayed Guests.
+> août 01 23:27:59 xxxxxxxx systemd[1]: Started Running libvirt delayed Guests.<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found configuration : [['guest1', '800'], ['guest2', '500'], ['guest3', '120']]<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found inactive guests : ['guest1', 'guest2', 'guest3']<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Schedule start of guest1 in 800 seconds<br>
@@ -37,4 +46,9 @@ Autostart libvirt guests with a delay.
 > août 01 23:32:59 xxxxxxxx guests_delayed[70440]: Start guest guest2<br>
 > août 01 23:41:19 xxxxxxxx guests_delayed[70440]: Start guest guest1<br>
 > août 01 23:41:21 xxxxxxxx guests_delayed[70440]: All delayed guests started
+
+Others linux
+------------
+
+You need to update path in script and systemd service according to your distribution
 
