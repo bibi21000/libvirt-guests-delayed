@@ -40,7 +40,7 @@ Installation for Debian/Ubuntu
 > <br>
 > août 01 23:27:59 xxxxxxxx systemd[1]: Started Running libvirt delayed Guests.<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found configuration : [['guest1', '800'], ['guest2', '500'], ['guest3', '120']]<br>
-> août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found inactive guests : ['guest1', 'guest2', 'guest3']<br>
+> août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found inactive guests : ['guest1', 'guest2', 'guest3', 'guest4']<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Schedule start of guest1 in 800 seconds<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Schedule start of guest2 in 500 seconds<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Schedule start of guest3 in 120 seconds<br>
