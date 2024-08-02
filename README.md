@@ -26,9 +26,11 @@ Installation for Debian/Ubuntu
 > virsh autostart guest2 --disable<br>
 > virsh autostart guest3 --disable
 
-- And reboot your host to try it
+- Reboot your host to try it
 
-- systemctl status libvirt-guests-delayed
+- Check status after restarting
+
+> systemctl status libvirt-guests-delayed
 
 > ● libvirt-guests-delayed.service - Running libvirt delayed Guests<br>
 >   Loaded: loaded (/etc/systemd/system/libvirt-guests-delayed.service; enabled; vendor preset: enabled)<br>
@@ -46,6 +48,8 @@ Installation for Debian/Ubuntu
 > août 01 23:32:59 xxxxxxxx guests_delayed[70440]: Start guest guest2<br>
 > août 01 23:41:19 xxxxxxxx guests_delayed[70440]: Start guest guest1<br>
 > août 01 23:41:21 xxxxxxxx guests_delayed[70440]: All delayed guests started
+
+- If something went wrong when starting guests, unit will enter in fail mode
 
 Others linux
 ------------
