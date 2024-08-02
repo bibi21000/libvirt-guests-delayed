@@ -1,5 +1,5 @@
 # libvirt-guests-delayed
-Autostart libvirt guests with a delay.
+Autostart libvirt guests at boot with a delay.
 
 Installation for Debian/Ubuntu
 ------------------------------
@@ -33,10 +33,10 @@ Installation for Debian/Ubuntu
 > systemctl status libvirt-guests-delayed
 
 > ● libvirt-guests-delayed.service - Running libvirt delayed Guests<br>
->   Loaded: loaded (/etc/systemd/system/libvirt-guests-delayed.service; enabled; vendor preset: enabled)<br>
->   Active: active (exited) since Thu 2024-08-01 23:27:59 CEST; 16min ago<br>
->   Process: 70440 ExecStart=/usr/lib/libvirt/guests_delayed.py (code=exited, status=0/SUCCESS)<br>
->   Main PID: 70440 (code=exited, status=0/SUCCESS)<br>
+>> Loaded: loaded (/etc/systemd/system/libvirt-guests-delayed.service; enabled; vendor preset: enabled)<br>
+>> Active: active (exited) since Thu 2024-08-01 23:27:59 CEST; 16min ago<br>
+>> Process: 70440 ExecStart=/usr/lib/libvirt/guests_delayed.py (code=exited, status=0/SUCCESS)<br>
+>> Main PID: 70440 (code=exited, status=0/SUCCESS)<br>
 > <br>
 > août 01 23:27:59 xxxxxxxx systemd[1]: Started Running libvirt delayed Guests.<br>
 > août 01 23:27:59 xxxxxxxx guests_delayed[70440]: Found configuration : [['guest1', '800'], ['guest2', '500'], ['guest3', '120']]<br>
@@ -51,8 +51,12 @@ Installation for Debian/Ubuntu
 
 - If something went wrong when starting guests, unit will enter in fail mode
 
+- If you want to stop startup process process of guests, stop the service
+
+> systemctl stop libvirt-guests-delayed
+
 Others linux
 ------------
 
-You need to update path in script and systemd service according to your distribution
+You need to update the paths in script and systemd service according to your distribution
 
