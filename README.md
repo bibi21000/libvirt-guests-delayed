@@ -28,7 +28,7 @@ Installation for Debian/Ubuntu
 
 - And reboot your host to try it
 
-> service libvirt-guests-delayed status
+- systemctl status libvirt-guests-delayed
 
 > ● libvirt-guests-delayed.service - Running libvirt delayed Guests<br>
 >   Loaded: loaded (/etc/systemd/system/libvirt-guests-delayed.service; enabled; vendor preset: enabled)<br>
