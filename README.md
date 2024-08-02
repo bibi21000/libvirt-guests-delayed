@@ -22,11 +22,11 @@ Installation for Debian/Ubuntu
 
 - Remove autostart in the configuration of guests you want to delay
 
-> virsh autostart guest1 --disable
-> virsh autostart guest2 --disable
+> virsh autostart guest1 --disable<br>
+> virsh autostart guest2 --disable<br>
 > virsh autostart guest3 --disable
 
-- And reboot to try it
+- And reboot your host to try it
 
 > service libvirt-guests-delayed status
 
