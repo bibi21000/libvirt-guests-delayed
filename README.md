@@ -51,7 +51,7 @@ Installation for Debian/Ubuntu
 
 - If something went wrong when starting guests, unit will enter in fail mode
 
-- If you want to stop startup process process of guests, stop the service
+- If you want to stop startup process of guests, stop the service
 
 > systemctl stop libvirt-guests-delayed
 
