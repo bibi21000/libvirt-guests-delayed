@@ -1,0 +1,17 @@
+Source: libvirt-guests-delayed
+Section: admin
+Priority: optional
+Maintainer: Sebastien GALLET <bibi21000@gmail.com>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.6.0
+Homepage: https://github.com/bibi21000/libvirt-guests-delayed
+Vcs-Browser: https://github.com/bibi21000/libvirt-guests-delayed
+Vcs-Git: https://github.com/bibi21000/libvirt-guests-delayed.git
+Rules-Requires-Root: no
+
+Package: libvirt-guests-delayed
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, libvirt-daemon, python3:any
+Description: Autostart libvirt guests at boot with a delay.
+ Python code and a systemd unit that launch the guests
+ after the delays specified in the configuration file.

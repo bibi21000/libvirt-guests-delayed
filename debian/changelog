@@ -1,0 +1,5 @@
+libvirt-guests-delayed (0.1.7-1) UNRELEASED; urgency=medium
+
+  * Initial release
+
+ -- Sebastien GALLET <bibi21000@gmail.com>  Sun, 06 Oct 2024 11:38:38 +0200

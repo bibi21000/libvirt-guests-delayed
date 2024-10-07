@@ -12,7 +12,7 @@ Type=simple
 ExecStart=/usr/lib/libvirt/guests_delayed.py
 StandardOutput=journal+console
 RemainAfterExit=yes
-TimeoutStartSec=1800
+TimeoutStartSec=infinity
 
 [Install]
 WantedBy=multi-user.target

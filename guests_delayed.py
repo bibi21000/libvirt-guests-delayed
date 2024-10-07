@@ -36,7 +36,7 @@ def load_conf():
         res = [ re.split(' |\t', r) for r in res ]
         return [ [r[0].strip(), r[1].strip()] for r in res]
     else:
-        syslog.syslog(syslog.LOG_INFO, "Can't find configuration file %s" % conf_file)
+        syslog.syslog(syslog.LOG_ERR, "Can't find configuration file %s" % conf_file)
         return []
 
 def list_guests():

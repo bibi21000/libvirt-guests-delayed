@@ -1,6 +1,16 @@
 # libvirt-guests-delayed
 Autostart libvirt guests at boot with a delay.
 
+Installation via PPA for Ubuntu
+--------------------------------
+
+- Add ppa to your system
+
+> sudo add-apt-repository ppa:sgallet/libvirt-guests-delayed
+> sudo apt update
+
+And use it
+
 Installation for Debian/Ubuntu
 ------------------------------
 
@@ -14,7 +24,12 @@ Installation for Debian/Ubuntu
 
 > systemctl enable libvirt-guests-delayed.service
 
-- Create the configuration file in /etc/libvirt/guests_delayed.conf
+And use it
+
+Use it
+------
+
+- Create or update the configuration file in /etc/libvirt/guests_delayed.conf
 
 > guest1 800<br>
 > guest2 500<br>

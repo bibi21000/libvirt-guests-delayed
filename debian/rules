@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/libvirt-guests-delayed/usr/lib/libvirt
+	install -m 755 guests_delayed.py debian/libvirt-guests-delayed/usr/lib/libvirt/guests_delayed.py
+	mkdir -p debian/libvirt-guests-delayed/etc/libvirt/
+	cp guests_delayed.conf debian/libvirt-guests-delayed/etc/libvirt/guests_delayed.conf
+
