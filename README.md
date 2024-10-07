@@ -2,12 +2,13 @@
 Autostart libvirt guests at boot with a delay.
 
 Installation via PPA for Ubuntu
---------------------------------
+-------------------------------
 
-- Add ppa to your system
+- Add ppa to your system and install package
 
 > sudo add-apt-repository ppa:sgallet/libvirt-guests-delayed
 > sudo apt update
+> sudo apt install libvirt-guests-delayed
 
 And use it
 
